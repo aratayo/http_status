@@ -1,0 +1,17 @@
+version: '3'
+services:
+  cloudflare:
+    image: 'cloudflare/cloudflared:latest'
+    container_name: "cloudflare"
+    volumes: ['./cloudflare/staging:/home/nonroot/.cloudflared']
+    command: tunnel run
+ 
+
+  # service-1:
+  #   ...
+
+  # service-2:
+  #   ...
+
+  # service-3:
+  #   ...
